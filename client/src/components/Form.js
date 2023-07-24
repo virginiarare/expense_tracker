@@ -9,6 +9,17 @@ export default function Form() {
                 <div className='input-group'>
                     <input type='text' placeholder='Salary, House Rent, SIP' className='form-input'/>
                 </div>
+                <select className='form-input'>
+                    <option value="Income" defaultValue>Income</option>
+                    <option value="Expense">Expense</option>
+                    <option value="Investment">Investment</option>
+                </select>
+                <div className="input-group">
+                    <input type="text" placeholder='Amount' className='form-input' />
+                </div>
+                <div className="submit-btn">
+                    <button className='border py-2 text-white bg-blue-900 w-full'>Make Transaction</button>
+                </div>
             </div>
         </form>
     </div>
