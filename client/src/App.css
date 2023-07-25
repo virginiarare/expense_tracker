@@ -20,6 +20,10 @@
   padding: 4em 0;
 }
 
+.bg-blue-custom {
+  background-color: #0066ff;
+}
+
 bg.-yellow{
   background-color: var(--color-yellow);
 }
