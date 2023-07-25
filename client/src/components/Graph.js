@@ -27,7 +27,7 @@ export default function Graph() {
       <div className='item'>
         <div className='chart relative'>
             <Pie{...config}></Pie>
-            <h3 className='mb-4 font-bold title'> Total
+            <h3 className='mb-4 font-bold title text-white'> Total
                 <span className='block text-2xl text-black-400'>${0}</span>
             </h3>
         </div>

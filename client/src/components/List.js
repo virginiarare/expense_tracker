@@ -19,7 +19,7 @@ const obj = [
 export default function List() {
   return (
     <div className= "flex flex-col py-6 gap-3">
-        <h1 className= 'py-4 font-bold text-xl'>Transaction History</h1>
+        <h1 className= 'py-4 font-bold text-xl text-white'>Transaction History</h1>
         {obj.map((v,i) => <Transaction key={i} category={v}></Transaction>)}
         
     </div>
