@@ -2,17 +2,17 @@ import React from 'react'
 
 const obj = [
     {
-    type:"Savings",
+    type:"Expense",
     color: 'rgb(255, 99, 132)',
     percent:45
 },
 {
-    type:"Investment",
+    type:"Income",
     color: 'rgb(54, 162, 235)',
     percent:20
 },
 {
-    type:"Expense",
+    type:"Investment",
     color: 'rgb(255, 205, 86)',
     percent:10
 }
