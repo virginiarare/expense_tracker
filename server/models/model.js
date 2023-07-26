@@ -1,17 +1,17 @@
 const mongoose =  require('mongoose')
+
 const Schema = mongoose.Schema;
 
 // categories => field => ['type', 'color']
 const categories_model =new Schema({
-    type: { type : String, default: "Income"},
+    type: { type : String, default: "Expense"},
     color : {type: String, default: '#FCBE44'}
 })
 
-//Type: Foreign Key
 // transactions  => field => ['name', 'type', 'amount', 'date']
 const transaction_model = new Schema({
     name: { type : String, default:"Anonymous"},
-    type: { type : String, default:"Income"},
+    type: { type : String, default:"Expense"},
     amount: { type : Number},
     date: { type : Date, default : Date.now}
 })
