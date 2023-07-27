@@ -1,26 +1,25 @@
 import React from 'react'
 import 'boxicons'
+import {default as api} from '../store/apiSlice';
 
-const obj = [
-    {
-    name:"Expense",
-    color: 'rgb(255, 99, 132)',
-},
-{
-    name:"Income",
-    color: 'rgb(54, 162, 235)',
-},
-{
-    name:"Investment",
-    color: 'rgb(255, 205, 86)',
-}
-]
 
 export default function List() {
+    const { data, isFetching , isSuccess, isError } = api.useGetLabelsQuery()
+    let Transactions;
+
+    if(isFetching){
+        Transactions = <div>Fetching</div>;
+    }else if(isSuccess){
+        Transactions = data.map((v, i) => <Transaction key={i} category={v}></Transaction>);
+    }else if(isError){
+        Transactions = <div>Error</div>
+    }
+
+
   return (
     <div className= "flex flex-col py-6 gap-3">
         <h1 className= 'py-4 font-bold text-xl text-white'>Transaction History</h1>
-        {obj.map((v,i) => <Transaction key={i} category={v}></Transaction>)}
+        {Transactions}
         
     </div>
   )
