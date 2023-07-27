@@ -23,12 +23,12 @@ export default function Form() {
         <form id='form' onSubmit={handleSubmit(onSubmit)}>
             <div className='grid gap-4'>
                 <div className='input-group'>
-                    <input type='text'{...register('name')} placeholder='Salary, House Rent, SIP' className='form-input'/>
+                    <input type='text'{...register('name')} placeholder='Description' className='form-input'/>
                 </div>
                 <select className='form-input' {...register('type')}>
                     <option value="Income" defaultValue>Income</option>
                     <option value="Expense">Expense</option>
-                    <option value="Investment">Investment</option>
+                    <option value="Savings">Savings</option>
                 </select>
                 <div className="input-group">
                     <input type="text" {...register('amount')} placeholder='Amount' className='form-input' />
