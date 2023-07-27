@@ -27,7 +27,7 @@ export const apiSlice = createApi({
                 method: "POST",
                 body: initialTransaction
             }),
-            // invalidatesTags: ['transaction']
+            invalidatesTags: ['transaction']
         }),
 
         // delete record
@@ -38,7 +38,7 @@ export const apiSlice = createApi({
                 method : "DELETE",
                 body : recordId
             }),
-            // invalidatesTags: ['transaction']
+            invalidatesTags: ['transaction']
         })
 
     })
