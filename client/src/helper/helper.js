@@ -38,12 +38,9 @@ export function chart_Data(transaction, custom){
               data: dataValue,
               backgroundColor: bg,
               hoverOffset: 4,
-              borderRadius : 30,
-              spacing: 10
+              borderRadius : 2,
+              spacing: 0
             }]
-        },
-        options : {
-            cutout: 115
         }
     }
 
