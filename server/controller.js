@@ -5,7 +5,7 @@ const model = require('./models/model');
 async function create_Categories(req, res) {
     try {
       const Create = new model.Categories({
-        type: "Investment",
+        type: "Income",
         color: "#FCBE44",
       });
   
@@ -29,7 +29,7 @@ async function  get_Categories(req, res){
     return res.json(filter);
 }
 
-//  post: http://localhost:8080/api/transaction
+//  post: http://localhost:5000/api/transaction
 async function create_Transaction(req, res) {
     if (!req.body) return res.status(400).json("Post HTTP Data not Provided");
   
@@ -95,7 +95,7 @@ async function get_Labels(req, res){
         let data = result.map(v => Object.assign({}, { _id: v._id, name: v.name, type: v.type, amount: v.amount, color: v.categories_info['color']}));
         res.json(data);
     }).catch(error => {
-        res.status(400).json("Looup Collection Error");
+        res.status(400).json("Lookup Collection Error");
     })
 
 }
