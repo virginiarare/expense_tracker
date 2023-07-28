@@ -6,7 +6,7 @@ async function create_Categories(req, res) {
     try {
       const Create = new model.Categories({
         type: "Income",
-        color: "#FCBE44",
+        color: "#00A4CCFF",
       });
   
       // Save the document to the database using the save() method
